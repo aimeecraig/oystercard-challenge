@@ -12,7 +12,6 @@ __*I can build with objects*__
 Most code in the world is structured in small pieces called objects. This is done because it is easier to change than having everything in one place.
 
 ## User Stories ##
-
 ```
 In order to use public transport
 As a customer
@@ -32,7 +31,16 @@ I am thinking that the balance should be kept as an attribute within the Oysterc
 In order to keep using public transport
 As a customer
 I want to add money to my card
+```
 
+#### Feature Test ####
+```
+require './lib/oystercard'
+card = Oystercard.new
+card.top_up(10)
+```
+
+```
 In order to protect my money
 As a customer
 I don't want to put too much money on my card

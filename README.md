@@ -59,11 +59,22 @@ card.top_up(100)
 
 This should raise an error.
 
+#### User Story ####
 ```
 In order to pay for my journey
 As a customer
 I need my fare deducted from my card
+```
 
+#### Feature Test ####
+```
+require './lib/oystercard'
+card = Oystercard.new
+card.deduct(5)
+```
+
+#### User Story ####
+```
 In order to get through the barriers
 As a customer
 I need to touch in and out

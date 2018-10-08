@@ -78,7 +78,19 @@ card.deduct(5)
 In order to get through the barriers
 As a customer
 I need to touch in and out
+```
 
+#### Feature Test ####
+```
+require './lib/oystercard'
+card = Oystercard.new
+card.touch_in
+card.in_journey?
+card.touch_out
+```
+
+#### User Story ####
+```
 In order to pay for my journey
 As a customer
 I need to have the minimum amount for a single journey

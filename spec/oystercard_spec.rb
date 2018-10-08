@@ -11,12 +11,12 @@ describe Oystercard do
     end
 
     it 'raises an error when top up exceeds 90' do
-      expect { subject.top_up(100)}.to raise_error 'Card has exceeded £90 limit.'
+      expect { subject.top_up(100) }.to raise_error 'Card has exceeded £90 limit.'
     end
 
     it 'tops up twice, exceeding the MAX_BALANCE constant and raises an error' do
       subject.top_up(50)
-      expect { subject.top_up(50)}.to raise_error 'Card has exceeded £90 limit.'
+      expect { subject.top_up(50) }.to raise_error 'Card has exceeded £90 limit.'
     end
 
     it 'deducts an amount from the card' do
@@ -37,6 +37,10 @@ describe Oystercard do
     it 'returns true when a user is in a journey' do
       subject.touch_in
       expect(subject.in_journey?).to eq true
+    end
+
+    it 'raises an error when touching in with insufficient funds' do
+      expect { subject.touch_in }.to raise_error 'Insufficient funds.'
     end
   end
 end

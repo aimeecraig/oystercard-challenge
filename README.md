@@ -17,7 +17,18 @@ Most code in the world is structured in small pieces called objects. This is don
 In order to use public transport
 As a customer
 I want money on my card
+```
 
+#### Feature Test ####
+```
+require './lib/oystercard'
+card = Oystercard.new
+card.balance
+```
+
+I am thinking that the balance should be kept as an attribute within the Oystercard. This can then have a default value that is set when creating a new card.
+
+```
 In order to keep using public transport
 As a customer
 I want to add money to my card

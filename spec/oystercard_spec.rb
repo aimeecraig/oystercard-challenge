@@ -1,20 +1,22 @@
 require 'oystercard'
 
 describe Oystercard do
-  it 'creates a new card with a default balance of 0' do
-    expect(subject.balance).to eq 0
-  end
+  context 'When testing the card balance' do
+    it 'creates a new card with a default balance of 0' do
+      expect(subject.balance).to eq 0
+    end
 
-  it 'tops up a new card with 10' do
-    expect(subject.top_up(10)).to eq 10
-  end
+    it 'tops up a new card with 10' do
+      expect(subject.top_up(10)).to eq 10
+    end
 
-  it 'raises an error when top up exceeds 90' do
-    expect { subject.top_up(100)}.to raise_error 'Card has exceeded £90 limit.'
-  end
+    it 'raises an error when top up exceeds 90' do
+      expect { subject.top_up(100)}.to raise_error 'Card has exceeded £90 limit.'
+    end
 
-  it 'tops up twice, exceeding the MAX_BALANCE constant and raises an error' do
-    subject.top_up(50)
-    expect { subject.top_up(50)}.to raise_error 'Card has exceeded £90 limit.'
+    it 'tops up twice, exceeding the MAX_BALANCE constant and raises an error' do
+      subject.top_up(50)
+      expect { subject.top_up(50)}.to raise_error 'Card has exceeded £90 limit.'
+    end
   end
 end

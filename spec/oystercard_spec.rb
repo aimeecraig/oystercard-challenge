@@ -30,8 +30,8 @@ describe Oystercard do
       expect(subject.touch_in).to eq true
     end
 
-    it 'returns true when a user touches out' do
-      expect(subject.touch_out).to eq true
+    it 'returns false when a user touches out' do
+      expect(subject.touch_out).to eq false
     end
 
     it 'returns true when a user is in a journey' do

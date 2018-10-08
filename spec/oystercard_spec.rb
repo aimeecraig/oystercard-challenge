@@ -27,6 +27,7 @@ describe Oystercard do
 
   context 'When testing the journey status' do
     it 'returns true when a user touches in' do
+      subject.top_up(10)
       expect(subject.touch_in).to eq true
     end
 
@@ -35,6 +36,7 @@ describe Oystercard do
     end
 
     it 'returns true when a user is in a journey' do
+      subject.top_up(10)
       subject.touch_in
       expect(subject.in_journey?).to eq true
     end

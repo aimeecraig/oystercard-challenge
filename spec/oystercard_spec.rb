@@ -12,4 +12,9 @@ describe Oystercard do
   it 'raises an error when top up exceeds 90' do
     expect { subject.top_up(100)}.to raise_error 'Card has exceeded £90 limit.'
   end
+
+  it 'tops up twice, exceeding the MAX_BALANCE constant and raises an error' do
+    subject.top_up(50)
+    expect { subject.top_up(50)}.to raise_error 'Card has exceeded £90 limit.'
+  end
 end

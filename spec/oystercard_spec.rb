@@ -24,4 +24,19 @@ describe Oystercard do
       expect(subject.deduct(5)).to eq 5
     end
   end
+
+  context 'When testing the journey status' do
+    it 'returns true when a user touches in' do
+      expect(subject.touch_in).to eq true
+    end
+
+    it 'returns true when a user touches out' do
+      expect(subject.touch_out).to eq true
+    end
+
+    it 'returns true when a user is in a journey' do
+      subject.touch_in
+      expect(subject.in_journey?).to eq true
+    end
+  end
 end

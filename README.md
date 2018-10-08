@@ -94,7 +94,19 @@ card.touch_out
 In order to pay for my journey
 As a customer
 I need to have the minimum amount for a single journey
+```
 
+#### Feature Test ####
+```
+require './lib/oystercard'
+card = Oystercard.new
+card.touch_in
+```
+
+This should raise an error as the card does not have sufficient funds.
+
+#### User Story ####
+```
 In order to pay for my journey
 As a customer
 I need to pay for my journey when it's complete

@@ -48,7 +48,18 @@ card.top_up(10)
 In order to protect my money
 As a customer
 I don't want to put too much money on my card
+```
 
+#### Feature Test ####
+```
+require './lib/oystercard'
+card = Oystercard.new
+card.top_up(100)
+```
+
+This should raise an error.
+
+```
 In order to pay for my journey
 As a customer
 I need my fare deducted from my card

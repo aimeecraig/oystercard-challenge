@@ -12,6 +12,8 @@ __*I can build with objects*__
 Most code in the world is structured in small pieces called objects. This is done because it is easier to change than having everything in one place.
 
 ## User Stories ##
+
+#### User Story ####
 ```
 In order to use public transport
 As a customer
@@ -27,6 +29,7 @@ card.balance
 
 I am thinking that the balance should be kept as an attribute within the Oystercard. This can then have a default value that is set when creating a new card.
 
+#### User Story ####
 ```
 In order to keep using public transport
 As a customer
@@ -40,6 +43,7 @@ card = Oystercard.new
 card.top_up(10)
 ```
 
+#### User Story ####
 ```
 In order to protect my money
 As a customer

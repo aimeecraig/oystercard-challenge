@@ -110,7 +110,18 @@ This should raise an error as the card does not have sufficient funds.
 In order to pay for my journey
 As a customer
 I need to pay for my journey when it's complete
+```
 
+#### Feature Test ####
+```
+require './lib/oystercard'
+card = Oystercard.new
+card.touch_out
+card.balance
+```
+
+#### User Story ####
+```
 In order to pay for my journey
 As a customer
 I need to know where I've travelled from
